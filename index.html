@@ -21,7 +21,8 @@
         <div class="card">
             <div class="box" style="justify-content:space-around;height:100%;flex-grow:1;"> 
                 <div style="display:flex;flex-direction:row;justify-content:space-around;">
-                    <div style="display:flex"><h1 >Porcentaje - Cantidades</h1></div>
+                    <div style="display:flex " ><h1 class="pato" align="center"></h1>
+                    </div>
                     <div style="display:flex"><h1></h1>
                     </div>
 
@@ -29,10 +30,10 @@
 
                 <div style="display:flex;flex-direction:row;justify-content:space-around;">
                     <div style="display:flex">
-                        <h3 class="patatota"></h3>
+                        <h2 class="patatota"></h2>
                     </div>
                     <div style="display:flex">
-                        <h5 class="pato"> </h5>
+                        <h5 class=" galleta" > </h5>
 
                     </div>
                 
@@ -52,8 +53,64 @@
 <script>
 const containerOfCards = document.querySelector(".deck");
 for (let i = 0; i < 29; i++) {
+
   const divElement = document.createElement("div");
   divElement.setAttribute("class", `card`);
+
+  var box=document.createElement("div");
+  box.setAttribute("class","box");
+  box.style="justify-content:space-around;height:100%;flex-grow:1;";
+  divElement.appendChild(box);
+
+  var soloestail=document.createElement("div");
+  soloestail.style="display:flex;flex-direction:row;justify-content:space-around;";
+  box.appendChild(soloestail);
+
+  var solittoestail;
+  var solittoestail2;
+
+  solittoestail=document.createElement("div");
+  solittoestail.style="display:flex;align:center;text-align:center;";
+ 
+
+
+
+  solittoestail2=document.createElement("div");
+  solittoestail2.style="display:flex;";
+ 
+  soloestail.appendChild(solittoestail);
+  var texito1=document.createElement("h1");
+    texito1.setAttribute("class","pato");
+    texito1.style="";
+    solittoestail.appendChild(texito1);
+
+    soloestail.appendChild(solittoestail2);
+    var texito2=document.createElement("h1");
+    texito2.style="align:center";
+    solittoestail2.appendChild(texito2);
+
+
+  var soloestail2=document.createElement("div");
+  soloestail.style="display:flex;flex-direction:row;justify-content:space-around;";
+  box.appendChild(soloestail2);
+    var solittoestail3;
+    var solittoestail4;
+    solittoestail3=document.createElement("div");
+    solittoestail3.style="display:flex;";
+    solittoestail4=document.createElement("div");
+    solittoestail4.style="display:flex;";
+    soloestail2.appendChild(solittoestail3);
+    var texito3=document.createElement("h2");
+    texito3.setAttribute("class","patatota");
+    texito3.style="align:center";
+    solittoestail3.appendChild(texito3);
+    soloestail2.appendChild(solittoestail4);
+    var texito4=document.createElement("h5");
+    texito4.setAttribute("class","galleta");
+    texito4.style="align:center";
+    solittoestail4.appendChild(texito4);
+    
+
   containerOfCards.appendChild(divElement);
 
 }
@@ -83,14 +140,10 @@ for (let i = 0; i < 29; i++) {
             gato[i].style.backgroundColor = 'rgba(255, 99, 132, 0.5)';
         } 
         else if (randomGenerator[i] >= 20 && randomGenerator[i]  < 50) {
-            gato[i].style.backgroundColor = "rgba(255,255,0,1.0)";
+            gato[i].style.backgroundColor = "rgba(138,255,29,1)";
             
         } 
-        else if (randomGenerator[i] >= 50 && randomGenerator[i]  < 80) {
-            gato[i].style.backgroundColor = "rgba(138,255,29,1)";
-        }
-        
-        else if (randomGenerator[i] >= 80) {
+        else if (randomGenerator[i] >= 50) {
             gato[i].style.backgroundColor = "rgba(0,255,102,1.0)";
         }
 
@@ -99,33 +152,8 @@ for (let i = 0; i < 29; i++) {
         var Pato = document.getElementsByClassName("pato")[i];
         var patatota  = document.getElementsByClassName("patatota")[i];
         patatota.innerHTML = "T:" + randomGenerator[i] + "%" + '<br />' + "D: 32% ";
-        Pato.innerHTML = Lugares[i] + '<br />' + "H: 48% "  + '<br />' + "M: 56% ";
+        Pato.innerHTML = Lugares[i];
     }
 
-    // Create a new sql connection
-
-    
-    
-    
-     /*
-        variablequenohesacado = 88;    
-        var gato = document.getElementsByClassName("card");
-        if (variablequenohesacado < 20) {
-            gato[0].style.backgroundColor = "rgba(255,0,0,1)";
-        } 
-        else if (variablequenohesacado > 20 && variablequenohesacado  < 50) {
-            gato[0].style.backgroundColor = "rgba(255,254,0,1)";
-            
-        } 
-        else if (variablequenohesacado > 50 && variablequenohesacado  < 80) {
-            gato[0].style.backgroundColor = "rgba(138,255,29,1)";
-        }
-        
-        else if (variablequenohesacado > 80) {
-            gato[0].style.backgroundColor = "rgba(0,255,57,1)";
-        }
-    
-    */
-    
         </script>
 
